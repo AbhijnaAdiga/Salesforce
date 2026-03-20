@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>College_Left_Date_Cannot_be_blank</fullName>
+    <active>true</active>
+    <description>College_left_date_Can&apos;t_be _Blank</description>
+    <errorConditionFormula>AND (  TEXT(Alumni__c) = &quot;No&quot;,
+NOT ISBLANK ( College_Left_Date__c )
+)</errorConditionFormula>
+    <errorDisplayField>College_Left_Date__c</errorDisplayField>
+    <errorMessage>College left date Can&apos;t be Empty !!!</errorMessage>
+</ValidationRule>

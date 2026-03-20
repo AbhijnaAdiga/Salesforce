@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Joined</fullName>
+                <default>false</default>
+                <label>Joined</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>New joinee</fullName>
+                <default>false</default>
+                <label>New joinee</label>
+            </value>
+            <value>
+                <fullName>confirmed</fullName>
+                <default>false</default>
+                <label>confirmed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
