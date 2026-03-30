@@ -1,0 +1,16 @@
+<template>
+     <lightning-card  title="IMPORT TUTORIAL"> 
+        <!--img src={src}/-->
+        <img src={src} style="width:200px; height:150px;" />
+         <template lwc:if={showinprd}>
+            <p>Welcome To PROD</p>
+         </template>
+         <template lwc:else>
+            <p>Welcome To NON PROD</p>
+         </template>
+         <template if:true={showinprd}>
+        <p>This will show when PROD is true</p>
+    </template>
+
+     </lightning-card>
+</template>
