@@ -1,0 +1,39 @@
+<template>
+    <lightning-card title="Lightning Record Edit Form">
+        <lightning-record-form
+           record-id={recordId}
+           object-api-name={objectApiName}
+            fields={Fieldslist}
+            columns="2"
+            onsuccess={navigateToList}
+        ></lightning-record-form>
+        </lightning-card>
+        <lightning-card title="Lightning Record Form Readonly Mode">
+        <lightning-record-form
+           record-id={recordId}
+           object-api-name={objectApiName}
+            fields={Fieldslist}
+            columns="2"
+            mode="readonly"
+        ></lightning-record-form>
+        </lightning-card>
+        <lightning-card title="Lightning Record Form Create Mode">
+        <lightning-record-form
+           object-api-name={objectApiName}
+            fields={Fieldslist}
+            columns="2"
+            onsuccess={showToast}
+        ></lightning-record-form>
+        </lightning-card>
+         <lightning-card title="Lightning Record View Form">
+        <lightning-record-view-form 
+            record-id={recordId}
+           object-api-name={objectApiName}
+           >
+           <div class="slds-box">
+             <lightning-output-field field-name={fieldMap.clgleft}></lightning-output-field>
+             <lightning-output-field field-name={fieldMap.discount}></lightning-output-field>
+           </div>
+        </lightning-record-view-form>
+        </lightning-card>
+</template>
