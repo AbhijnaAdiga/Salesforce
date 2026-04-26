@@ -8,5 +8,6 @@ const columns =[
 ]
 export default class Wiremethods extends LightningElement {
     column=columns;
-    @wire(studentdata) students;
+    @wire(studentdata) 
+    students;
 }
