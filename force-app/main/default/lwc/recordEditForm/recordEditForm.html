@@ -1,0 +1,44 @@
+<template>
+     <lightning-card title="Lightning Record Edit Form">
+        <lightning-record-edit-form
+           record-id={recordId}
+           object-api-name={objectApiName}
+        >
+        <lightning-messages></lightning-messages>
+        <div class="slds-var-p-around-small">
+            <lightning-input-field field-name={fields.Name}></lightning-input-field>
+            <lightning-input-field field-name={fields.Website}></lightning-input-field>
+            <lightning-input-field field-name={fields.Address}></lightning-input-field>
+            <lightning-input-field field-name={fields.About_College}></lightning-input-field>
+        </div>
+        <div class="slds-var-p-around-small">
+        <lightning-button
+            variant="brand" type="submit" label="Submit"
+        ></lightning-button>
+        </div>
+        </lightning-record-edit-form>
+        </lightning-card>
+        <lightning-card title="Lightning Record Edit- Create Form">
+        <lightning-record-edit-form
+           onsuccess={navigateToListview}
+           object-api-name={objectApiName}
+           onerror={errorhandler}
+        >
+        <lightning-messages></lightning-messages>
+        <div class="slds-var-p-around-small">
+            <lightning-input-field field-name={fields.Name}></lightning-input-field>
+            <lightning-input-field field-name={fields.Website}></lightning-input-field>
+            <lightning-input-field field-name={fields.Address}></lightning-input-field>
+            <lightning-input-field field-name={fields.About_College}></lightning-input-field>
+        </div>
+        <div class="slds-var-p-around-small">
+        <lightning-button
+            variant="brand" type="submit" label="Submit" 
+        ></lightning-button>
+        <lightning-button
+            variant="brand"  label="Reset" onclick={resethandler}
+        ></lightning-button>
+        </div>
+        </lightning-record-edit-form>
+        </lightning-card>
+</template>

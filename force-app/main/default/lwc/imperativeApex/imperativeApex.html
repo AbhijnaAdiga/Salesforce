@@ -1,0 +1,22 @@
+<template>
+<lightning-card title="Lightning Imperative Apex">
+    <div class="slds-var-p-around-small">
+        <lightning-button
+            label="Student data"
+            variant="brand"
+            onclick={clickHandler}
+        ></lightning-button>
+        </div>
+        <template lwc:if={data}>
+            <div class="slds-var-p-around-small">
+            <div style="height: 300px">
+    <lightning-datatable
+            key-field="id"
+            data={data}
+            columns={columns}>
+    </lightning-datatable>
+</div>
+    </div>
+    </template>
+</lightning-card>  
+</template>
