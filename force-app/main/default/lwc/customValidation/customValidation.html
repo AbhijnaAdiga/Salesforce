@@ -1,0 +1,41 @@
+<template>
+    <lightning-card title="Custom Validation">
+        <lightning-record-edit-form
+            record-id={recordId}
+            object-api-name={objectApiName}
+            onsubmit={handleSubmit}
+        >
+
+            <lightning-messages></lightning-messages>
+
+            <div class="slds-var-p-around-small">
+
+                <lightning-input
+                    label="Name"
+                    name="Name"
+                    value={name}
+                    data-id="Name"
+                    onkeyup={handleChange}>
+                </lightning-input>
+
+                <lightning-input
+                    label="Phone"
+                    name="Phone"
+                    value={phone}
+                    data-id="Phone"
+                    onkeyup={handleChange}>
+                </lightning-input>
+
+            </div>
+
+            <div class="slds-var-p-around-small">
+                <lightning-button
+                    variant="brand"
+                    type="submit"
+                    label="Submit">
+                </lightning-button>
+            </div>
+
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>
