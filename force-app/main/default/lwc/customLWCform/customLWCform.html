@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Custom LWC Form">
+        <div class="slds-var-p-around-small">
+            <lightning-input
+            label="University Name"
+            placeholder="Enter the University Name"
+            required="true"
+            name="Uniname"
+            message-when-value-missing="Enter the Name!!"
+            ></lightning-input>
+            <lightning-radio-group 
+            name="Region"
+            label="Region"
+            options={options}
+            type="radio"></lightning-radio-group>
+            <lightning-input-rich-text
+            name="description"
+        label="Description">
+    </lightning-input-rich-text>
+        </div>
+         <div class="slds-var-p-around-small">
+            <lightning-button label="Save" title="Submit" variant="brand" onclick={saverecord} ></lightning-button>
+         </div>
+    </lightning-card>
+</template>
