@@ -1,0 +1,7 @@
+<apex:page controller="PrintPDFfromVF" renderAs="pdf">
+<!-- Begin Default Content REMOVE THIS -->
+<h1>Draft Invoice</h1>
+<p>Opportunity Name: {!opp.Name}</p>
+    <p>Amount: {!opp.Amount}</p>
+    <p>Stage: {!opp.StageName}</p>
+</apex:page>
