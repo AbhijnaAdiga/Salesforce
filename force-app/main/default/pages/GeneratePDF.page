@@ -1,0 +1,38 @@
+<apex:page standardController="Opportunity"
+           extensions="PrintPDFfromVF"
+           renderAs="pdf">
+
+ <img src="{!URLFOR($Resource.VF_Page_Logo)}"
+         width="120"
+         height="60"/>
+
+    <h1>Draft Invoice</h1>
+
+     <table border="1">
+        <tr>
+            <th>Field</th>
+            <th>Value</th>
+        </tr>
+
+        <tr>
+            <td>Opportunity Name</td>
+            <td>{!opp.Name}</td>
+        </tr>
+
+        <tr>
+            <td>Amount</td>
+            <td>{!opp.Amount}</td>
+        </tr>
+
+        <tr>
+            <td>Stage</td>
+            <td>{!opp.StageName}</td>
+        </tr>
+
+        <tr>
+            <td>Close Date</td>
+            <td>{!opp.CloseDate}</td>
+        </tr>
+    </table>
+
+</apex:page>
